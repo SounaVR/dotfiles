@@ -38,4 +38,5 @@ wal -i $HOME/Downloads/wallpaper.png &
 xcompmgr &
 vban.sh &
 startdwm &
+mpd &
 exec slstatus
