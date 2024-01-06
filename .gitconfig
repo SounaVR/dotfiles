@@ -1,0 +1,39 @@
+[user]
+	email = pinpoye21@gmail.com
+	name = SounaVR
+
+[rebase]
+	# Automatically stash before a rebase and unstash afterwards.
+	autoStash = true
+
+[commit]
+	# Show diff when preparing commit message
+	verbose = true
+
+[alias]
+	a = add
+	s = status
+	st = status
+	ci = commit
+	b = branch
+	d = diff
+	dc = diff --cached
+	ls = ls-files
+	# Push Current
+	pc = !"f() { remote=\"${1:-origin}\"; git push -u \"$remote\" $(git rev-parse --abbrev-ref HEAD); }; f"
+	# Push Current Force
+	pcf = !"f() { echo git pc \"$@\" -f; }; f"
+	# Current branch
+	current = rev-parse --abbrev-ref HEAD
+
+###
+### Github specific
+###
+[github]
+	user = SounaVR
+
+###
+### Include local overrides
+###
+[pull]
+	rebase = true
