@@ -36,7 +36,7 @@ setxkbmap fr &
 xwallpaper --zoom $HOME/Downloads/wallpaper.png &
 wal -i $HOME/Downloads/wallpaper.png &
 xcompmgr &
-vban.sh &
 startdwm &
+vban.sh &
 mpd &
 exec slstatus
