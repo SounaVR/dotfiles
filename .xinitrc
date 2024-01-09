@@ -38,5 +38,6 @@ wal -i $HOME/Downloads/wallpaper.png &
 xcompmgr &
 startdwm &
 vban.sh &
+receptor.sh &
 mpd &
 exec slstatus
