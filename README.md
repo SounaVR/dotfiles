@@ -7,7 +7,7 @@ Managed with [yadm](https://github.com/TheLocehiliosan/yadm).
 - [ ] archinstall repo
 - [ ] discord selfbot repo for music stuff on arch
 - [ ] yadm bootstrap
-- [ ] Get vban_receptor working (tf is wrong with linux audio)
+- [x] Get vban_receptor working (tf is wrong with linux audio)
 - [ ] Do an Alexa like to invoke my music script
 - [ ] Learn neovim and get gud
 - [x] Get a delicious nice looking terminal
