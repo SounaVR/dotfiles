@@ -1,13 +1,77 @@
 <!DOCTYPE patchbay>
-<patchbay name="Patchbay" version="0.6.1">
+<patchbay name="Patchbay" version="0.6.2">
  <items>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [python3.11]/ALSA Playback [python3.11]" port="ALSA Playback [python3.11]:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="mpv" port="mpv:output_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Chromium-1" port="Chromium:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [vban_receptor]/ALSA Playback [vban_receptor]" port="ALSA Playback [vban_receptor]:output_FL"/>
+   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [python3.11]/ALSA Playback [python3.11]" port="ALSA Playback [python3.11]:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [python3.11]/ALSA Playback [python3.11]" port="ALSA Playback [python3.11]:output_FR"/>
+   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="python3" port="python3:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FR"/>
+   <input node="OBS" port="OBS:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="OBS-1" port="OBS:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VirtualMic" port="VirtualMic:monitor_FL"/>
+   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
    <input node="python3" port="python3:input_MONO"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="python3" port="python3:monitor_MONO"/>
-   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_MONO"/>
+   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
+   <input node="python3" port="python3:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FR"/>
@@ -22,12 +86,16 @@
    <input node="OBS" port="OBS:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FL"/>
-   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="python3" port="python3:input_MONO"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
-   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_2"/>
+   <output node="python3" port="python3:monitor_MONO"/>
+   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FL"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FR"/>
@@ -43,127 +111,11 @@
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
-   <input node="OBS-1" port="OBS:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VirtualMic" port="VirtualMic:monitor_FL"/>
-   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
-   <input node="python3" port="python3:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
-   <input node="python3" port="python3:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [vban_receptor]/ALSA Playback [vban_receptor]" port="ALSA Playback [vban_receptor]:output_FL"/>
-   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="mpv" port="mpv:output_FL"/>
    <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-1" port="Chromium:output_FL"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FR"/>
-   <input node="OBS" port="OBS:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
-   <input node="python3" port="python3:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="mpv" port="mpv:output_FL"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FL"/>
-   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FL"/>
-   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
-   <input node="python3" port="python3:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
-   <input node="PipeWire ALSA [ffmpeg]/ALSA Capture [ffmpeg]" port="ALSA Capture [ffmpeg]:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
-   <input node="PipeWire ALSA [aplay]/ALSA Capture [aplay]" port="ALSA Capture [aplay]:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FL"/>
-   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VirtualMic" port="VirtualMic:capture_FL"/>
-   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FR"/>
-   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox-1" port="Firefox:output_FR"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
-   <input node="PipeWire ALSA [aplay]/ALSA Capture [aplay]" port="ALSA Capture [aplay]:input_MONO"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VirtualMic" port="VirtualMic:capture_FL"/>
-   <input node="VirtualMic" port="VirtualMic:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="VirtualMic" port="VirtualMic:capture_FR"/>
    <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_2"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FR"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
-   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
-   <input node="PipeWire ALSA [ffmpeg]/ALSA Capture [ffmpeg]" port="ALSA Capture [ffmpeg]:input_FL"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Firefox" port="Firefox:output_FR"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FR"/>
-   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FR"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
-  </item>
-  <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium-1" port="Chromium:output_FR"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="VirtualMic" port="VirtualMic:capture_FR"/>
@@ -178,20 +130,92 @@
    <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="Chromium" port="Chromium:output_FL"/>
-   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+   <output node="Chromium-1" port="Chromium:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
    <output node="PipeWire ALSA [flite]/ALSA Playback [flite]" port="ALSA Playback [flite]:output_FR"/>
    <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [vban_receptor]/ALSA Playback [vban_receptor]" port="ALSA Playback [vban_receptor]:output_FR"/>
+   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
    <output node="VirtualMic" port="VirtualMic:monitor_FR"/>
    <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_2"/>
   </item>
   <item node-type="pipewire" port-type="pipewire-audio">
-   <output node="PipeWire ALSA [vban_receptor]/ALSA Playback [vban_receptor]" port="ALSA Playback [vban_receptor]:output_FR"/>
-   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FR"/>
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FL"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="PipeWire ALSA [ffmpeg]/ALSA Capture [ffmpeg]" port="ALSA Capture [ffmpeg]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="PipeWire ALSA [python3.11]/ALSA Playback [python3.11]" port="ALSA Playback [python3.11]:output_FL"/>
+   <input node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:playback_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox" port="Firefox:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FR"/>
+   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FL"/>
+   <input node="PipeWire ALSA [aplay]/ALSA Capture [aplay]" port="ALSA Capture [aplay]:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VirtualMic" port="VirtualMic:capture_FL"/>
+   <input node="VirtualMic" port="VirtualMic:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VirtualMic" port="VirtualMic:capture_FL"/>
+   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_1"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Music Player Daemon/mpd.PipeWire Sound Server" port="mpd.PipeWire Sound Server:output_FR"/>
+   <input node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="Firefox-1" port="Firefox:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="WEBRTC VoiceEngine" port="WEBRTC VoiceEngine:output_FR"/>
+   <input node="AudioRelay Speaker" port="AudioRelay Speaker:playback_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="VirtualMic" port="VirtualMic:capture_FR"/>
+   <input node="OBS Studio: Mic" port="OBS Studio: Mic:in_2"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
+   <input node="python3" port="python3:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
+   <input node="PipeWire ALSA [ffmpeg]/ALSA Capture [ffmpeg]" port="ALSA Capture [ffmpeg]:input_FR"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FL"/>
+   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_MONO"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Speaker" port="AudioRelay Speaker:monitor_FL"/>
+   <input node="PipeWire ALSA [vban_emitter]/ALSA Capture [vban_emitter]" port="ALSA Capture [vban_emitter]:input_FL"/>
+  </item>
+  <item node-type="pipewire" port-type="pipewire-audio">
+   <output node="AudioRelay Mic&amp;Sink" port="AudioRelay Mic&amp;Sink:capture_FR"/>
+   <input node="PipeWire ALSA [aplay]/ALSA Capture [aplay]" port="ALSA Capture [aplay]:input_MONO"/>
   </item>
  </items>
 </patchbay>

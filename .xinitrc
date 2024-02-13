@@ -37,7 +37,8 @@ xwallpaper --zoom $HOME/Downloads/wallpaper.png &
 wal -i $HOME/Downloads/wallpaper.png &
 xcompmgr &
 startdwm &
-vban.sh &
+emitter.sh &
 receptor.sh &
 mpd &
+matterbridge.sh &
 exec slstatus
